@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "pinia": "^2.1.7",
     "vue": "^2.7.16",
     "vue-fragment": "^1.6.0"
   },
