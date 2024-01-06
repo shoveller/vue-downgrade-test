@@ -2,6 +2,10 @@
 defineProps<{
   msg: string
 }>()
+
+import useCounter from './useCounter'
+
+const store = useCounter()
 </script>
 
 <template>
@@ -10,8 +14,11 @@ defineProps<{
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue {{ store.count }}</a
+      >.
     </h3>
+    <button @click="store.plus">+</button>
+    <button @click="store.minus">-</button>
   </div>
 </template>
 
@@ -39,3 +46,4 @@ h3 {
   }
 }
 </style>
+./useCounter

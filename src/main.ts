@@ -3,8 +3,9 @@ import './assets/main.css'
 import Vue from 'vue'
 import App from './App.vue'
 import Fragment from 'vue-fragment'
-import { createPinia } from 'pinia'
+import { createPinia, PiniaVuePlugin } from 'pinia'
 
+Vue.use(PiniaVuePlugin)
 Vue.use(Fragment.Plugin)
 
 new Vue({
